@@ -8,17 +8,43 @@ import Footer from "./Footer";
 
 
 //create your first component
-const Home = () => {
+
+
+	const cards = [
+		{
+		image: "https://placehold.jp/500x325.png",
+		title: "Card Title",
+		description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quasi ducimus, itaque error aperiam saepe obcaecati culpa eius temporibus exercitationem? Perferendis iste nobis, itaque nostrum quas aspernatur deserunt iusto numquam!",
+		},
+		{
+		image: "https://placehold.jp/500x325.png",
+		title: "Card Title",
+		description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quasi ducimus, itaque error aperiam saepe obcaecati culpa eius temporibus exercitationem? Perferendis iste nobis, itaque nostrum quas aspernatur deserunt iusto numquam!",
+		},
+		{
+		image: "https://placehold.jp/500x325.png",
+		title: "Card Title",
+		description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quasi ducimus, itaque error aperiam saepe obcaecati culpa eius temporibus exercitationem? Perferendis iste nobis, itaque nostrum quas aspernatur deserunt iusto numquam!",
+		},
+		{
+		image: "https://placehold.jp/500x325.png",
+		title: "Card Title",
+		description: "SLorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quasi ducimus, itaque error aperiam saepe obcaecati culpa eius temporibus exercitationem? Perferendis iste nobis, itaque nostrum quas aspernatur deserunt iusto numquam!",
+		}
+
+	]
+
+	const Home = () => {
+
 	return (
 		<div>
 			<NavBar />
 			<Jumbotron />
 			<div className = "container my-4">
 			<div className= "row">
-				<Card />
-				<Card />
-				<Card />
-				<Card />
+				{cards.map((item, index) => (
+					<Card cards={item} />
+					))}
 			</div>
 			</div>
 			<Footer />
@@ -28,3 +54,4 @@ const Home = () => {
 };
 
 export default Home
+
